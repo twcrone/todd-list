@@ -6,3 +6,9 @@ rvm:
   - "1.9.3"
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+
+script:
+  - RAILS_ENV=test bundle exec rake db:drop
+  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake db:schema:load --trace
+  - bundle exec rspec spec
