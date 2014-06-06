@@ -5,13 +5,10 @@
     <% @items.each do |item| %>
       <tr>
         <td class='mobile'><big><%= item.title %><big></td>
-        <td><%= button_to 'Done', controller: 'items', action: 'done', id: item%></td>
+        <td><%= button_to 'Done', controller: 'items', action: 'done', id: item, class: 'red-button' %></td>
       </tr>
     <% end %>
-      <tr><td><form><input type=button value="Refresh" onClick="window.location.reload()"></form> </td></td></tr>
+      <tr><td><form><input type='button' value="Refresh" onClick="window.location.reload()" class='big-red-button'></form> </td></td></tr>
 
   </tbody>
 </table>
-
-<br>
-
