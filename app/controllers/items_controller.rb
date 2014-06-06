@@ -1,9 +1,14 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :done]
 
   # GET /items
   # GET /items.json
   def index
+    @items = Item.all
+  end
+
+  # GET /items/list
+  def list
     @items = Item.all
   end
 
@@ -58,6 +63,14 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def done
+    @item.destroy
+    @items = Item.all
+    respond_to do |format|
+      format.html { render :list }    
     end
   end
 

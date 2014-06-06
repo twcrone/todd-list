@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+table.center {
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }

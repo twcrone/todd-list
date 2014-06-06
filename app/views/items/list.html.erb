@@ -1,0 +1,17 @@
+
+<table class='center'>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><big><%= item.title %><big></td>
+        <td><%= button_to 'Done', controller: 'items', action: 'done', id: item, method: :get %></td>
+      </tr>
+    <% end %>
+      <tr><td><%= link_to 'New Item', new_item_path %></td></tr>
+
+  </tbody>
+</table>
+
+<br>
+

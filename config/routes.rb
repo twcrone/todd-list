@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get 'open-items' => 'items#list'
+
+  post 'items/:id/done', to: 'items#done'
+  
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
