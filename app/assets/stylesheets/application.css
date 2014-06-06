@@ -20,8 +20,8 @@ table.center {
   }
 
 td.mobile {
-    font-size: 100px;
-    padding: 30px;
+    font-size: 50px;
+    width: 90%;
 }
 
 input {
