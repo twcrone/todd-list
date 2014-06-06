@@ -14,7 +14,12 @@
  *= require_self
  */
 table.center {
-    width:70%; 
-    margin-left:15%; 
-    margin-right:15%;
+    width:90%; 
+    margin-left:5%; 
+    margin-right:5%;
   }
+
+td {
+    font-size: 40px;
+    padding: 15px;
+}
