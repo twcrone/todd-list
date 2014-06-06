@@ -5,10 +5,10 @@
     <% @items.each do |item| %>
       <tr>
         <td class='mobile'><big><%= item.title %><big></td>
-        <td><%= button_to 'Done', controller: 'items', action: 'done', id: item, method: :get %></td>
+        <td><%= button_to 'Done', controller: 'items', action: 'done', id: item%></td>
       </tr>
     <% end %>
-      <tr><td><%= link_to 'New Item', new_item_path %></td></tr>
+      <tr><td><form><input type=button value="Refresh" onClick="window.location.reload()"></form> </td></td></tr>
 
   </tbody>
 </table>
