@@ -19,11 +19,13 @@ table.center {
     margin-right:5%;
   }
 
+input[type=text].mobile,
 td.mobile {
     font-size: 50px;
     width: 80%;
 }
 
+button,
 input[type=button],
 input[type=submit] {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;

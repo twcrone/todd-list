@@ -1,26 +1,29 @@
 
 <div ng-controller='listItems'>
 
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr ng-repeat="item in items">
-        <td>{{ item.title }}</td>
-        <td></td>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th colspan="3"></th>
       </tr>
-  </tbody>
-</table>
-<input type='text' id='newItem' ng-model='newItem' maxlength='30' />
-<button ng-click="addItem(newItem)" ng-disabled="!newItemValid(newItem)">Add</button>
-<br>
+    </thead>
 
+    <tbody>
+        <tr ng-repeat="item in items">
+          <td class='mobile'>{{ item.title }}</td>
+          <td><button>Done</button></td>
+        </tr>
+        <tr>
+          <td>
+            <input type='text' id='newItem' ng-model='newItem' maxlength='30' class='mobile' />
+          </td>
+          <td>
+            <button ng-click="addItem(newItem)" ng-disabled="!newItemValid(newItem)">Add</button>
+          </td>
+    </tbody>
+  </table>
 </div>
 
