@@ -7,5 +7,9 @@ app.controller('listItems', function($scope) {
 		{ title: 'Mow Lawn' },
 		{ title: 'Take out trash' }
 	];
+
+	$scope.addItem = function(newItem) {
+		$scope.items.push({ title: newItem });
+	}
 });
 
