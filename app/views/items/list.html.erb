@@ -1,10 +1,11 @@
 
+<div ng-controller='listItems'
 <table class='center'>
 
   <tbody>
-    <% @items.each do |item| %>
       <tr>
-        <td class='mobile'><big><%= item.title %><big></td>
+      <tr ng-repeat="item in items">	
+        <td class='mobile'><big>{{ item.title }}<big></td>
         <td><%= button_to 'Done', controller: 'items', action: 'done', id: item, class: 'red-button' %></td>
       </tr>
     <% end %>

@@ -1,4 +1,7 @@
-<h1>Listing items</h1>
+
+<div ng-controller='listItems'>
+
+<h1>{{ title }}</h1>
 
 <table>
   <thead>
@@ -9,40 +12,17 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr ng-repeat="item in items">
+        <td>{{ item.title }}</td>
+        <td></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
 
+</div>
+
 <br>
 
-
-<%= link_to 'New Item', new_item_path %>
-
-<% @item = Item.new() %>
-<%= form_for(@item) do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
-      <% @item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, size: 30 %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 
