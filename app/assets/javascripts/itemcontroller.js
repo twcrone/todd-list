@@ -1,6 +1,6 @@
 var app = angular.module('lists', []);
 
-app.controller('listItems', function($scope) {
+app.controller('listItems', [$scope, function($scope) {
 	$scope.title = 'Todo List';
 	$scope.items = [
 		{ title: 'Laundry' },
@@ -23,5 +23,5 @@ app.controller('listItems', function($scope) {
 		var length = newItem.trim().length
 		return length > 0 && length < 31; 
 	}
-});
+}]);
 
