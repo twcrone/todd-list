@@ -5,7 +5,7 @@
     <tbody>
         <tr ng-repeat="item in items">
           <td class='mobile'>{{ item.title }}</td>
-          <td><button>Done</button></td>
+          <td><button ng-click="removeItem($index)">Done</button></td>
         </tr>
         <tr>
           <td>

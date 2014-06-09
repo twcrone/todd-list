@@ -12,6 +12,10 @@ app.controller('listItems', function($scope) {
 		$scope.items.push({ title: newItem });
 	}
 
+	$scope.removeItem = function(index) {
+		$scope.items.splice(index, 1);
+	}
+
 	$scope.newItemValid = function(newItem) {
 		if(newItem == undefined || newItem == null) {
 			return false;
