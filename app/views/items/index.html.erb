@@ -18,8 +18,8 @@
       </tr>
   </tbody>
 </table>
-<input type='text' id='newItem' ng-model='newItem' />
-<button ng-click="addItem(newItem)">Add</button>
+<input type='text' id='newItem' ng-model='newItem' maxlength='30' />
+<button ng-click="addItem(newItem)" ng-disabled="!newItemValid(newItem)">Add</button>
 <br>
 
 </div>
