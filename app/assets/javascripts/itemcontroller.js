@@ -8,8 +8,9 @@ app.controller('listItems', [ '$scope', function($scope) {
 		{ title: 'Take out trash' }
 	];
 
-	$scope.addItem = function(newItem) {
-		$scope.items.push({ title: newItem });
+	$scope.addItem = function() {
+		$scope.items.push({ title: $scope.newItem });
+		$scope.newItem = '';
 	}
 
 	$scope.removeItem = function(index) {
@@ -19,6 +20,13 @@ app.controller('listItems', [ '$scope', function($scope) {
 	$scope.newItemValid = function(newItem) {
 		if(newItem == undefined || newItem == null) {
 			return false;
+		}
+		var count = $scope.items.length;
+
+		for (var i = 0; i < count; ++i) {
+			if($scope.items[i].title == newItem) {
+				return false;
+			}	
 		}
 		var length = newItem.trim().length
 		return length > 0 && length < 31; 
