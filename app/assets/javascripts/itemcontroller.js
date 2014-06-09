@@ -1,6 +1,6 @@
 var app = angular.module('lists', []);
 
-app.controller('listItems', [$scope, function($scope) {
+app.controller('listItems', [ '$scope', function($scope) {
 	$scope.title = 'Todo List';
 	$scope.items = [
 		{ title: 'Laundry' },
